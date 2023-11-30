@@ -21,19 +21,23 @@
 }
 
 .productList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   margin: 5rem 0;
-  grid-gap: 3rem;
 }
 
 .card {
+  background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 0.5rem;
   transition: all 250ms ease-in-out;
   cursor: pointer;
   padding: 2rem;
-  /* ASK GUILHERME ABOUT WHY THIS DOESNT WORK. FIRST COL TOO BIG */
+  float: left;
+  max-width: calc(33.33% - 2rem);
+  margin: 1rem;
+}
+
+.card:nth-child(3n + 1) {
+  clear: both;
 }
 
 .card:hover {
